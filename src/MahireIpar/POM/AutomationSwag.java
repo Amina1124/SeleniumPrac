@@ -36,15 +36,19 @@ static InventoryPage inventoryPage;
 			mainPage.clickLogin();
 			
 		}
+		
+		public static void shoppingList() {
+			inventoryPage.clickItem1();
+			inventoryPage.clickItem2();
+		}
+		
+		
 		public static void logout() {
 			inventoryPage.clickMenu();
 			
 			inventoryPage.clickLogout();
 		}
-		public static void shoppingList() {
-			inventoryPage.clickItem1();
-			inventoryPage.clickItem2();
-		}
+		
 
 	}
 
