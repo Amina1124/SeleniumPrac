@@ -31,9 +31,11 @@ static void login() {
 	mainPage.setUserName();
 	mainPage.setPsw();
 	mainPage.clickLogin();
+	
+    
 	}
 static public void logout() {  
-	inventoryPage.clickItem1();
+     inventoryPage.clickItem1();
      inventoryPage.clickItem2();
 	inventoryPage.clickMenu();
 	inventoryPage.clickLogout();
