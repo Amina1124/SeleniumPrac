@@ -1,9 +1,9 @@
 package aygulomar.POM;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
-
 import com.selenium.POM.Pages.InventoryPage;
 import com.selenium.POM.Pages.MainPage;
 
@@ -16,7 +16,6 @@ public class OutmateSwag {
 		login();
 		logout();
  }
-	 
 		public static void init() {
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
 		driver=new ChromeDriver();
@@ -26,7 +25,7 @@ public class OutmateSwag {
 		inventoryPage=PageFactory.initElements(driver, InventoryPage.class);
 		
 } 
-static void login() {
+static public void login() {
 	
 	mainPage.setUserName();
 	mainPage.setPsw();
@@ -35,10 +34,12 @@ static void login() {
     
 	}
 static public void logout() {  
-     inventoryPage.clickItem1();
+	
+	inventoryPage.clickItem1();
      inventoryPage.clickItem2();
-	inventoryPage.clickMenu();
-	inventoryPage.clickLogout();
+    inventoryPage.clickMenu();
+    inventoryPage.clickLogout();
+   
 }
 
 
