@@ -22,7 +22,7 @@ public class FormAutomate {
 	
 	
 	static void init() {
-		System.setProperty("webdriver.chrome.driver", "c:\\selenium\\chromedriver_85.exe");
+		System.setProperty("webdriver.chrome.driver", "c:\\selenium\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://toolsqa.com/automation-practice-form/");
