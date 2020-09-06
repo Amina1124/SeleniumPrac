@@ -39,7 +39,7 @@ public class FormAutomate {
 		mainForm.setEmail(user1.getEmail());
 		mainForm.setGender(user1.getGender());
 		mainForm.setDOB(user1.getDOB());
-	
+		mainForm.setMobile(user1.getMobile());
 	}
 
 }

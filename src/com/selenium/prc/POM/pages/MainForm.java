@@ -1,6 +1,6 @@
 package com.selenium.prc.POM.pages;
 
-import org.junit.validator.PublicClassValidator;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,8 +30,8 @@ public class MainForm {
 	
 	@FindBy(id="gender-radio-3")
 	WebElement other;
-	
-	
+	@FindBy(id="userNumber")
+	WebElement mobile;
 	//actions
 	public void setFname(String fn){
 		fName.sendKeys(fn);
@@ -61,6 +61,10 @@ public class MainForm {
 	
 	public void setDOB(String dob){
 		
+	}
+	public void setMobile(String  mobile) {
+		this.mobile.sendKeys(mobile);
+	
 	}
 
 }
