@@ -40,6 +40,11 @@ public class FormAutomate {
 		mainForm.setGender(user1.getGender());
 		mainForm.setDOB(user1.getDOB());
 		mainForm.setMobile(user1.getMobile());
+		mainForm.setAddr(user1.getAddr());
+		mainForm.setState(user1.getState());
+		mainForm.setCity(user1.getCity());
+		mainForm.setSubject(user1.getSubject());
+		mainForm.setPicLoc(user1.getPicLoc());
 	}
 
 }
