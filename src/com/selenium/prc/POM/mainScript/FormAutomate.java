@@ -22,7 +22,7 @@ public class FormAutomate {
 	
 	
 	static void init() {
-		System.setProperty("webdriver.chrome.driver", "c:\\selenium\\chromedriver_85.exe");
+		System.setProperty("webdriver.chrome.driver", "c:\\selenium\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://toolsqa.com/automation-practice-form/");
@@ -39,7 +39,12 @@ public class FormAutomate {
 		mainForm.setEmail(user1.getEmail());
 		mainForm.setGender(user1.getGender());
 		mainForm.setDOB(user1.getDOB());
-	
+		mainForm.setMobile(user1.getMobile());
+		mainForm.setAddr(user1.getAddr());
+		mainForm.setState(user1.getState());
+		mainForm.setCity(user1.getCity());
+		mainForm.setSubject(user1.getSubject());
+		mainForm.setPicLoc(user1.getPicLoc());
 	}
 
 }
