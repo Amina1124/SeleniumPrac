@@ -90,7 +90,7 @@ public class MainForm {
 		Subject.sendKeys((subject)+ Keys.ENTER);
 		}
 	
-	public void setPicLoc(String picLoc ){
-		PicLoc.sendKeys(picLoc);}
+	//public void setPicLoc(String picLoc ){
+		//PicLoc.sendKeys(picLoc);}
 	
 }

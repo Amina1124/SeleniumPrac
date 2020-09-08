@@ -44,7 +44,7 @@ public class FormAutomate {
 		mainForm.setState(user1.getState());
 		mainForm.setCity(user1.getCity());
 		mainForm.setSubject(user1.getSubject());
-		mainForm.setPicLoc(user1.getPicLoc());
+	//	mainForm.setPicLoc(user1.getPicLoc());
 	}
 
 }
