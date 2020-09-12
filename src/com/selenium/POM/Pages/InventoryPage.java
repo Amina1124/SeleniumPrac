@@ -1,9 +1,19 @@
 package com.selenium.POM.Pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class InventoryPage {
+	WebDriver driver;
+	
+	public InventoryPage(WebDriver driver) {
+		this.driver=driver;
+	}
+	
 	@FindBy(xpath="//*[@id=\"inventory_container\"]/div/div[1]/div[3]/button")
 	WebElement item1;
 	
@@ -31,5 +41,16 @@ public class InventoryPage {
 	
 	public void clickLogout() {
 		logout.click();
+	}
+	
+	public boolean isLogoutExist(){		
+		WebDriverWait wait=new WebDriverWait(driver, 10);
+		WebElement xx=wait.until(ExpectedConditions.visibilityOf(logout));
+		if(xx !=null){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }

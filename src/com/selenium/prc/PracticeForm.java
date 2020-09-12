@@ -63,6 +63,9 @@ public class PracticeForm {
 					executor.executeScript("arguments[0].click()", genderElem.get(i));
 				}
 			}
+			
+			driver.findElement(By.id("userNumber")).sendKeys(user1.getMobile());			
+
 			// "05/01/1997"
 			String[] dob = user1.getDOB().split("[/]"); // dob[0]=05 dob[1]=01
 														// dob[2]=1997
@@ -141,12 +144,8 @@ public class PracticeForm {
 				break;
 			}
 
-			driver.findElement(By.id("userNumber")).sendKeys(user1.getMobile());
-
 			WebElement bd = driver.findElement(By.id("dateOfBirthInput"));
 			bd.click();
-			// Jan, 15, 1995
-
 			WebElement month = driver.findElement(By.className("react-datepicker__month-select"));
 			Select sel_month = new Select(month);
 			// sel_month.selectByValue("0");
@@ -155,7 +154,7 @@ public class PracticeForm {
 			WebElement year = driver.findElement(By.className("react-datepicker__year-select"));
 			Select sel_year = new Select(year);
 			sel_year.selectByVisibleText(dob[2]);
-
+			
 			List<WebElement> days = driver
 					.findElements(By.xpath("//div[contains" + "(@class,\"react-datepicker__day--\")]"));
 

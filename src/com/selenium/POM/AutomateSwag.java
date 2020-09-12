@@ -1,6 +1,5 @@
 package com.selenium.POM;
 
-import org.apache.commons.math3.stat.descriptive.StatisticalSummaryValues;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -14,9 +13,10 @@ public class AutomateSwag {
 	static MainPage mainPage;
 	
 	
-		public static void main(String[] args) {
+	public static void main(String[] args) {
 		init();
 		login();
+		logout();
 
 	}
 	
@@ -27,18 +27,22 @@ public class AutomateSwag {
 		driver.get("https://www.saucedemo.com/index.html");
 		
 		mainPage=PageFactory.initElements(driver, MainPage.class);
-		inventoryPage=PageFactory.initElements(driver, InventoryPage.class);
-		
+		inventoryPage=PageFactory.initElements(driver, InventoryPage.class);		
 	}
 
 	static public void login(){
 		mainPage.setUserName();
 		mainPage.setPsw();
-		mainPage.clickLogin();
-		
+		mainPage.clickLogin();		
 	}
 	
 	static public void logout(){
+		inventoryPage.clickMenu();
+		if(inventoryPage.isLogoutExist()){
+			inventoryPage.clickLogout();
+		}else{
+			System.out.println("There is no Logout Element exist.");
+		}
 		
 	}
 }

@@ -17,12 +17,11 @@ public class FormAutomate {
 	public static void main(String[] args) throws Exception {
 		init();
 		fillOutForm();
-
 	}
 	
 	
 	static void init() {
-		System.setProperty("webdriver.chrome.driver", "c:\\selenium\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "c:\\selenium\\chromedriver_85.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://toolsqa.com/automation-practice-form/");
@@ -38,8 +37,8 @@ public class FormAutomate {
 		mainForm.setLname(user1.getLstName());
 		mainForm.setEmail(user1.getEmail());
 		mainForm.setGender(user1.getGender());
-		mainForm.setDOB(user1.getDOB());
 		mainForm.setMobile(user1.getMobile());
+		mainForm.setDOB(user1.getDOB());		
 		mainForm.setAddr(user1.getAddr());
 		mainForm.setState(user1.getState());
 		mainForm.setCity(user1.getCity());
